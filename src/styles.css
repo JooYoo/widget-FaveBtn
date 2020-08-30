@@ -34,7 +34,7 @@ body {
 
 .heart {
   /* FIXME: helpEl */
-  border: 1px red solid;
+  /* border: 1px red solid; */
 
   background: var(--chain-img-hear) no-repeat; /* chain-img display 0/28 frame */
 }
@@ -61,7 +61,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
 
   /* FIXME: helpEl */
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
 
   background: var(--chain-img-name) no-repeat;
 }
