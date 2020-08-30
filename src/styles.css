@@ -1,0 +1,88 @@
+:root {
+  --chain-img-hear: url(../assets/chain-img.png);
+  --chain-img-name: url(../assets/FaveBtnName.png);
+  --chain-img-size: 100px;
+  --chain-img-frame: 28;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 18px;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.heart,
+.name {
+  width: var(--chain-img-size);
+  height: var(--chain-img-size);
+  margin: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    heart                                   */
+/* -------------------------------------------------------------------------- */
+
+.heart {
+  /* FIXME: helpEl */
+  border: 1px red solid;
+
+  background: var(--chain-img-hear) no-repeat; /* chain-img display 0/28 frame */
+}
+
+.heart-click {
+  /* define the transition animation */
+  transition: background-position-x 1s steps(var(--chain-img-frame));
+  /* pull the chain-img to left */
+  background-position-x: calc(
+    var(--chain-img-size) * var(--chain-img-frame) * -1
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    name                                    */
+/* -------------------------------------------------------------------------- */
+
+.name {
+  /* center text*/
+  text-align: center;
+  line-height: var(--chain-img-size);
+  cursor: pointer;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.5);
+
+  /* FIXME: helpEl */
+  border: 1px blue solid;
+
+  background: var(--chain-img-name) no-repeat;
+}
+
+.name-click {
+  animation: faveAnim 0.5s steps(var(--chain-img-frame)) forwards;
+}
+
+@keyframes faveAnim {
+  0% {
+    background-position-x: 0;
+    font-size: 0;
+  }
+  50% {
+    font-size: 20px;
+  }
+  100% {
+    background-position-x: calc(
+      var(--chain-img-size) * var(--chain-img-frame) * -1
+    );
+    font-size: 18px;
+    color: black;
+  }
+}
