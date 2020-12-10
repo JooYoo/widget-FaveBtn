@@ -1,6 +1,6 @@
 :root {
-  --chain-img-hear: url(../assets/chain-img.png);
-  --chain-img-name: url(../assets/FaveBtnName.png);
+  --chain-img-hear: url(../src/assets/chain-img.png);
+  --chain-img-name: url(../src/assets/FaveBtnName.png);
   --chain-img-size: 100px;
   --chain-img-frame: 28;
 }
