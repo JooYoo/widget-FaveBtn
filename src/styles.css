@@ -52,16 +52,16 @@ body {
 /* -------------------------------------------------------------------------- */
 
 .name {
-  /* center text*/
   text-align: center;
   line-height: var(--chain-img-size);
+
   cursor: pointer;
   user-select: none;
-  color: rgba(0, 0, 0, 0.5);
 
-  /* FIXME: helpEl */
+  /* DEV: helpEl */
   /* border: 1px blue solid; */
 
+  color: rgba(0, 0, 0, 0.5);
   background: var(--chain-img-name) no-repeat;
 }
 
